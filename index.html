@@ -1,0 +1,988 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart — Web Developer & Business Owner</title>
+    <meta
+      name="description"
+      content="Smart — Full-Stack Web Developer & Business Owner. Building premium digital experiences."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════
+       CURSOR GLOW (signature element)
+  ═══════════════════════════════════════ -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- ═══════════════════════════════════════
+       SCROLL PROGRESS BAR
+  ═══════════════════════════════════════ -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-text">S</span><span class="logo-dot">.</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link" data-section="projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#services" class="nav-link" data-section="services"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="#testimonials" class="nav-link" data-section="testimonials"
+              >Reviews</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-section="contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+            <i class="fa-solid fa-moon" id="themeIcon"></i>
+          </button>
+          <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="mobileClose">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <ul>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#testimonials" class="mobile-link">Reviews</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+       SECTION 1 · HERO
+  ═══════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <!-- Animated blobs -->
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+
+      <!-- Particle canvas -->
+      <canvas class="particles" id="particleCanvas"></canvas>
+
+      <div class="hero-content">
+        <div class="hero-badge reveal-up" style="--delay: 0.1s">
+          <span class="badge-dot"></span> Available for work
+        </div>
+
+        <h1 class="hero-name reveal-up" style="--delay: 0.2s">
+          Hi, I'm <span class="gradient-text">Smart</span>
+        </h1>
+
+        <div class="hero-title reveal-up" style="--delay: 0.3s">
+          <span class="static-text">I build </span>
+          <span class="typing-wrapper">
+            <span class="typed" id="typed"></span>
+            <span class="cursor-blink">|</span>
+          </span>
+        </div>
+
+        <p class="hero-bio reveal-up" style="--delay: 0.4s">
+          Turning ambitious ideas into pixel-perfect digital products. I craft
+          fast, scalable, and beautiful web experiences that convert visitors
+          into customers.
+        </p>
+
+        <div class="hero-actions reveal-up" style="--delay: 0.5s">
+          <a href="#projects" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-rocket"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-ghost btn-lg">
+            <i class="fa-solid fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+
+        <div class="hero-stats reveal-up" style="--delay: 0.6s">
+          <div class="stat">
+            <span class="stat-num" data-count="50">0</span><span>+</span>
+            <span class="stat-label">Projects Done</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="3">0</span><span>+</span>
+            <span class="stat-label">Years Exp.</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="30">0</span><span>+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal-right" style="--delay: 0.4s">
+        <div class="hero-card glass">
+          <div class="card-avatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-inner">
+              <img src="images/smart.jpg" alt="Smart" class="hero-photo" />
+            </div>
+          </div>
+          <div class="card-info">
+            <p class="card-name">Smart</p>
+            <p class="card-role">Web Developer</p>
+          </div>
+          <div class="card-status"><span class="status-dot"></span> Online</div>
+          <div class="card-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">UI/UX</span>
+          </div>
+        </div>
+        <div class="floating-badge fb-1 glass">
+          <i class="fa-brands fa-react"></i> React Expert
+        </div>
+        <div class="floating-badge fb-2 glass">
+          <i class="fa-solid fa-star"></i> Top Rated
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll down">
+        <span class="scroll-wheel"></span>
+      </a>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       SECTION 2 · ABOUT
+  ═══════════════════════════════════════ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Who I Am</span>
+          <h2 class="section-title">
+            About <span class="gradient-text">Me</span>
+          </h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual scroll-reveal fade-left">
+            <div class="about-img-wrap">
+              <div class="about-img-placeholder">
+                <img src="images/smart.jpg" alt="Smart" />
+              </div>
+              <div class="about-img-decor"></div>
+            </div>
+            <div class="about-img-badge glass">
+              <i class="fa-solid fa-trophy"></i>
+              <div>
+                <strong>Top Developer</strong>
+                <span>Since 2021</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content scroll-reveal fade-right">
+            <p class="about-intro">
+              I'm a
+              <strong>full-stack web developer and business owner</strong>
+              passionate about building high-performance digital solutions that
+              drive real business results.
+            </p>
+            <p class="about-text">
+              With expertise spanning front-end finesse to back-end
+              architecture, I bring a holistic approach to every project. I've
+              helped startups launch MVPs, e-commerce brands scale revenue, and
+              businesses establish powerful online identities.
+            </p>
+
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Frontend Development</span><span>95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-w="95"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Backend Development</span><span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-w="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>UI/UX Design</span><span>90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-w="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>E-commerce</span><span>88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" data-w="88"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tech-stack">
+              <span class="tech-badge"
+                ><i class="fa-brands fa-react"></i> React</span
+              >
+              <span class="tech-badge"
+                ><i class="fa-brands fa-node-js"></i> Node.js</span
+              >
+              <span class="tech-badge"
+                ><i class="fa-brands fa-js"></i> JavaScript</span
+              >
+              <span class="tech-badge"
+                ><i class="fa-brands fa-python"></i> Python</span
+              >
+              <span class="tech-badge"
+                ><i class="fa-brands fa-figma"></i> Figma</span
+              >
+              <span class="tech-badge"
+                ><i class="fa-brands fa-css3-alt"></i> CSS3</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       SECTION 3 · PROJECTS
+  ═══════════════════════════════════════ -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">What I've Built</span>
+          <h2 class="section-title">
+            Featured <span class="gradient-text">Projects</span>
+          </h2>
+        </div>
+
+        <div class="projects-filter scroll-reveal fade-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web App</button>
+          <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+
+        <div class="projects-grid">
+          <div
+            class="project-card glass scroll-reveal fade-up"
+            data-category="web"
+            style="--delay: 0.1s"
+          >
+            <div class="project-img">
+              <div class="project-img-placeholder c1">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="project-overlay">
+                <a href="#" class="btn btn-sm btn-primary"
+                  ><i class="fa-solid fa-eye"></i> Live Demo</a
+                >
+                <a href="#" class="btn btn-sm btn-ghost"
+                  ><i class="fa-brands fa-github"></i> GitHub</a
+                >
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="ptag">React</span>
+                <span class="ptag">Node.js</span>
+                <span class="ptag">MongoDB</span>
+              </div>
+              <h3 class="project-title">SaaS Analytics Dashboard</h3>
+              <p class="project-desc">
+                Real-time data visualization platform for business intelligence
+                with live charts, KPI tracking, and team collaboration features.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="project-card glass scroll-reveal fade-up"
+            data-category="ecommerce"
+            style="--delay: 0.2s"
+          >
+            <div class="project-img">
+              <div class="project-img-placeholder c2">
+                <img src="images/project1.png" alt="SmartTech Collections" />
+              </div>
+
+              <div class="project-overlay">
+                <a
+                  href="https://ds-innovation-27o9.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-sm btn-primary"
+                >
+                  <i class="fa-solid fa-eye"></i> Live Demo
+                </a>
+
+                <a
+                  href="https://github.com/DaviesonSmart/ds-innovation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-sm btn-ghost"
+                >
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="ptag">React</span>
+                <span class="ptag">Firebase</span>
+                <span class="ptag">Bootstrap</span>
+                <span class="ptag">Firestore</span>
+              </div>
+
+              <h3 class="project-title">SmartTech Collections</h3>
+
+              <p class="project-desc">
+                A modern fashion e-commerce platform built with React,
+                Bootstrap, and Firebase. Features include user authentication,
+                shopping cart, checkout flow, Firestore database integration,
+                responsive design, and an admin dashboard for product and order
+                management.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="project-card glass scroll-reveal fade-up"
+            data-category="design"
+            style="--delay: 0.3s"
+          >
+            <div class="project-img">
+              <div class="project-img-placeholder c3">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <div class="project-overlay">
+                <a href="#" class="btn btn-sm btn-primary"
+                  ><i class="fa-solid fa-eye"></i> Live Demo</a
+                >
+                <a href="#" class="btn btn-sm btn-ghost"
+                  ><i class="fa-brands fa-github"></i> GitHub</a
+                >
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="ptag">Figma</span>
+                <span class="ptag">React</span>
+                <span class="ptag">Tailwind</span>
+              </div>
+              <h3 class="project-title">FinTech Mobile App UI</h3>
+              <p class="project-desc">
+                Premium banking app design system with 80+ screens,
+                micro-animations, accessibility compliance, and developer
+                handoff.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="project-card glass scroll-reveal fade-up"
+            data-category="web"
+            style="--delay: 0.1s"
+          >
+            <div class="project-img">
+              <div class="project-img-placeholder c4">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="project-overlay">
+                <a href="#" class="btn btn-sm btn-primary"
+                  ><i class="fa-solid fa-eye"></i> Live Demo</a
+                >
+                <a href="#" class="btn btn-sm btn-ghost"
+                  ><i class="fa-brands fa-github"></i> GitHub</a
+                >
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="ptag">Vue.js</span>
+                <span class="ptag">Firebase</span>
+                <span class="ptag">WebRTC</span>
+              </div>
+              <h3 class="project-title">Online Learning Platform</h3>
+              <p class="project-desc">
+                Ed-tech platform with video lessons, progress tracking, quizzes,
+                certificates, and real-time instructor chat.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="project-card glass scroll-reveal fade-up"
+            data-category="ecommerce"
+            style="--delay: 0.2s"
+          >
+            <div class="project-img">
+              <div class="project-img-placeholder c5">
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <div class="project-overlay">
+                <a href="#" class="btn btn-sm btn-primary"
+                  ><i class="fa-solid fa-eye"></i> Live Demo</a
+                >
+                <a href="#" class="btn btn-sm btn-ghost"
+                  ><i class="fa-brands fa-github"></i> GitHub</a
+                >
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="ptag">React</span>
+                <span class="ptag">Express</span>
+                <span class="ptag">Redis</span>
+              </div>
+              <h3 class="project-title">Restaurant Booking System</h3>
+              <p class="project-desc">
+                Table reservation platform with real-time availability,
+                automated reminders, POS integration, and review system.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="project-card glass scroll-reveal fade-up"
+            data-category="design"
+            style="--delay: 0.3s"
+          >
+            <div class="project-img">
+              <div class="project-img-placeholder c6">
+                <img src="images/aurelia img.png" alt="Aurelia Estate" />
+              </div>
+              <div class="project-overlay">
+                <a
+                  href="https://aurelia-estates-lpo3.arcada.app/"
+                  class="btn btn-sm btn-primary"
+                  ><i class="fa-solid fa-eye"></i> Live Demo</a
+                >
+                <a
+                  href="https://github.com/DaviesonSmart/aurelia-estates"
+                  class="btn btn-sm btn-ghost"
+                  ><i class="fa-brands fa-github"></i> GitHub</a
+                >
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="ptag">Next.js</span>
+                <span class="ptag">Three.js</span>
+                <span class="ptag">GSAP</span>
+              </div>
+              <h3 class="project-title">Real Estate Showcase</h3>
+              <p class="project-desc">
+                Immersive 3D property showcase with virtual tours, interactive
+                floor plans, mortgage calculator, and agent portal.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-cta scroll-reveal fade-up">
+          <a
+            href="https://github.com"
+            target="_blank"
+            class="btn btn-ghost btn-lg"
+          >
+            <i class="fa-brands fa-github"></i> See All on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       SECTION 4 · SERVICES
+  ═══════════════════════════════════════ -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">What I Offer</span>
+          <h2 class="section-title">
+            My <span class="gradient-text">Services</span>
+          </h2>
+        </div>
+
+        <div class="services-grid">
+          <div
+            class="service-card glass scroll-reveal fade-up"
+            style="--delay: 0.1s"
+          >
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-code service-icon"></i>
+            </div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-desc">
+              Blazing-fast, fully responsive web applications built with modern
+              frameworks like React, Next.js, and Vue.js.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Custom Web Apps</li>
+              <li><i class="fa-solid fa-check"></i> API Integration</li>
+              <li><i class="fa-solid fa-check"></i> Performance Optimized</li>
+            </ul>
+            <a href="#contact" class="service-link"
+              >Get Started <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div
+            class="service-card glass scroll-reveal fade-up"
+            data-featured="true"
+            style="--delay: 0.2s"
+          >
+            <div class="service-badge">Most Popular</div>
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-cart-shopping service-icon"></i>
+            </div>
+            <h3 class="service-title">E-Commerce Websites</h3>
+            <p class="service-desc">
+              Revenue-generating online stores with seamless checkout flows,
+              inventory management, and payment gateways.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Shopify / WooCommerce</li>
+              <li><i class="fa-solid fa-check"></i> Custom Cart & Payments</li>
+              <li><i class="fa-solid fa-check"></i> Analytics & SEO</li>
+            </ul>
+            <a href="#contact" class="service-link"
+              >Get Started <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div
+            class="service-card glass scroll-reveal fade-up"
+            style="--delay: 0.3s"
+          >
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-bullseye service-icon"></i>
+            </div>
+            <h3 class="service-title">Landing Pages</h3>
+            <p class="service-desc">
+              High-conversion landing pages designed to capture leads and turn
+              traffic into paying customers with proven UX patterns.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> CRO-Focused Design</li>
+              <li><i class="fa-solid fa-check"></i> A/B Testing Ready</li>
+              <li><i class="fa-solid fa-check"></i> Lightning Fast</li>
+            </ul>
+            <a href="#contact" class="service-link"
+              >Get Started <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div
+            class="service-card glass scroll-reveal fade-up"
+            style="--delay: 0.4s"
+          >
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-palette service-icon"></i>
+            </div>
+            <h3 class="service-title">UI/UX Design</h3>
+            <p class="service-desc">
+              Beautiful, intuitive interfaces that users love. From wireframes
+              to polished prototypes, every pixel is intentional.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Figma Prototypes</li>
+              <li><i class="fa-solid fa-check"></i> Design Systems</li>
+              <li><i class="fa-solid fa-check"></i> User Research</li>
+            </ul>
+            <a href="#contact" class="service-link"
+              >Get Started <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       SECTION 5 · TESTIMONIALS
+  ═══════════════════════════════════════ -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Client Feedback</span>
+          <h2 class="section-title">
+            What People <span class="gradient-text">Say</span>
+          </h2>
+        </div>
+
+        <div class="testimonial-carousel">
+          <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-card glass">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Smart delivered our e-commerce platform in record time. The
+                attention to detail is extraordinary — our conversion rate
+                jumped 40% after launch. Absolutely exceptional work."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar av1">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="author-info">
+                  <strong>Sarah Johnson</strong>
+                  <span>CEO, StyleBoutique</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Working with Smart was a game-changer. He understood our vision
+                instantly and built something that exceeded all expectations.
+                The animations are smooth and the code is clean."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar av2">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="author-info">
+                  <strong>Marcus Williams</strong>
+                  <span>Founder, TechLaunch</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Our landing page went from a 2% to an 8% conversion rate after
+                Smart's redesign. He has a rare skill — he thinks like a
+                marketer and designs like an artist."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar av3">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="author-info">
+                  <strong>Aisha Okafor</strong>
+                  <span>Marketing Director, GrowthCo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card glass">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Smart built our SaaS dashboard from scratch in 6 weeks.
+                Technically brilliant, communicates clearly, delivers on time.
+                He's now our go-to developer for all projects."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar av4">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="author-info">
+                  <strong>David Chen</strong>
+                  <span>CTO, DataStream Inc.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="prevBtn" aria-label="Previous">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="carousel-dots" id="carouselDots"></div>
+            <button class="carousel-btn" id="nextBtn" aria-label="Next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       SECTION 6 · CONTACT
+  ═══════════════════════════════════════ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Let's Talk</span>
+          <h2 class="section-title">
+            Get In <span class="gradient-text">Touch</span>
+          </h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info scroll-reveal fade-left">
+            <p class="contact-intro">
+              Ready to build something amazing? Whether you have a project in
+              mind or just want to explore possibilities — I'd love to hear from
+              you.
+            </p>
+
+            <div class="contact-cards">
+              <div class="contact-card glass">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <span>Email</span>
+                  <a href="mailto:hello@smart.dev">hello@smart.dev</a>
+                </div>
+              </div>
+              <div class="contact-card glass">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div>
+                  <span>WhatsApp</span>
+                  <a href="https://wa.me/2348000000000" target="_blank"
+                    >+234 800 000 0000</a
+                  >
+                </div>
+              </div>
+              <div class="contact-card glass">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <span>Location</span>
+                  <span>Lagos, Nigeria 🇳🇬</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a
+                href="https://github.com"
+                target="_blank"
+                class="social-link"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                class="social-link"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://wa.me/2348000000000"
+                target="_blank"
+                class="social-link"
+                aria-label="WhatsApp"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="social-link"
+                aria-label="X / Twitter"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap scroll-reveal fade-right">
+            <form class="contact-form glass" id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-user"></i>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="John Doe"
+                    required
+                  />
+                </div>
+                <span class="field-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-envelope"></i>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="john@example.com"
+                    required
+                  />
+                </div>
+                <span class="field-error" id="emailError"></span>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-tag"></i>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Project Inquiry"
+                    required
+                  />
+                </div>
+                <span class="field-error" id="subjectError"></span>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <div class="input-wrap textarea-wrap">
+                  <i class="fa-solid fa-message"></i>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell me about your project..."
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <span class="field-error" id="messageError"></span>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg w-full"
+                id="submitBtn"
+              >
+                <span class="btn-text"
+                  ><i class="fa-solid fa-paper-plane"></i> Send Message</span
+                >
+                <span class="btn-loading hidden"
+                  ><i class="fa-solid fa-spinner fa-spin"></i> Sending...</span
+                >
+              </button>
+              <div class="form-success hidden" id="formSuccess">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Message sent! I'll get back to you within 24 hours.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <a href="#hero" class="nav-logo">
+              <span class="logo-text">S</span><span class="logo-dot">.</span>
+            </a>
+            <p>Building the web, one pixel at a time.</p>
+          </div>
+
+          <nav class="footer-nav">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <div class="footer-socials">
+            <a href="https://github.com" target="_blank" aria-label="GitHub"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://wa.me/2348000000000"
+              target="_blank"
+              aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> Smart. All rights reserved.</p>
+          <p>Designed & Built with <span class="heart">♥</span> by Smart</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════
+       BACK TO TOP
+  ═══════════════════════════════════════ -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
